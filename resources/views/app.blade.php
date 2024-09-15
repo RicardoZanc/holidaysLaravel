@@ -10,9 +10,21 @@
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <h1 class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">HolidaySearch</h1>
-        </a>
-        
+    </a>   
     </div>
     </nav>
+
+    <div class="h-full w-full flex-col">
+        <div class=" mt-3 w-full flex place-content-center">
+            <h1 class="text-2xl">Digite o ano que deseja verificar os feriados:</h1>
+        </div>
+        <div class="w-full mt-5 p-5 flex place-content-center">
+            <form action="{{ url('holidayIndex') }}" method="post">
+                @csrf
+                <input id="ano" type="text" placeholder="Ano" class="border border-gray-300 p-2 flex-grow focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <button class="bg-black text-white px-4">Pesquisar</button>
+            </form>
+    </div>
+    </div>
 </body>
 </html>
