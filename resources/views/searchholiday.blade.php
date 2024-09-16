@@ -8,16 +8,23 @@
 <body>
     <nav class="bg-black">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="{{ url('/') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <h1 class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">HolidaySearch</h1>
     </a>   
     </div>
     </nav>
 
-    <div class="h-full w-full flex-col">
+    <div id="holidays-container" class="h-full w-full flex flex-col items-center mt-3">
         @if(!empty($holidays))
             @foreach($holidays as $holiday)
-                <p>{{ $holiday['name'] }}</p>
+                 <div class="self-center border-2 border-black w-7/12 my-3 p-3 flex justify-between">
+                    <div>
+                        <h1 class="text-2xl">{{ $holiday['name'] }}</h2>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl">{{ $holiday['date'] }}</h2>
+                    </div>
+                 </div>
             @endforeach
         @else
             <p>Nenhum feriado encontrado.</p>
