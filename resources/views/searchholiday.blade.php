@@ -15,15 +15,15 @@
     </nav>
 
     <div class="h-full w-full flex-col">
-        <div class=" mt-3 w-full flex place-content-center">
-            <h1 class="text-2xl">Digite o ano que deseja verificar os feriados:</h1>
-        </div>
+        @if(!empty($holidays))
+            @foreach($holidays as $holiday)
+                <p>{{ $holiday['name'] }}</p>
+            @endforeach
+        @else
+            <p>Nenhum feriado encontrado.</p>
+        @endif
+
         <div class="w-full mt-5 p-5 flex place-content-center">
-            <form action="{{ url('searchholiday') }}" method="post">
-                @csrf
-                <input id="year" name="year" type="text" placeholder="ano..." class="border border-gray-300 p-2 flex-grow focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                <input type="submit" class="bg-black text-white px-4" value="Pesquisar"></input>
-            </form>
     </div>
     </div>
 </body>
