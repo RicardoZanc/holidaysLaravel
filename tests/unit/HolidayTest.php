@@ -1,5 +1,5 @@
 <?php
-namespace tests;
+namespace Tests;
 
 use App\Http\Controllers\HolidayController;
 use PHPUnit\Framework\TestCase;
@@ -12,5 +12,5 @@ class HolidayTest extends TestCase {
         $convertedDate = $controller->formatDate($dateToConvert);
         $this->assertEquals("01/02/2024", $convertedDate);
     }
-    
+
 }
