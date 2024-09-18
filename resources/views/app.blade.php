@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holiday Search</title>
   @vite('resources/css/app.css')
 </head>
 <body>
@@ -21,8 +22,8 @@
         <div class="w-full mt-5 p-5 flex place-content-center">
             <form action="{{ url('searchholiday') }}" method="post">
                 @csrf
-                <input id="year" name="year" type="text" placeholder="ano..." class="border border-gray-300 p-2 flex-grow focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                <input type="submit" class="bg-black text-white px-4" value="Pesquisar"></input>
+                <input id="year" data-testid="year" name="year" type="text" placeholder="ano..." class="border border-gray-300 p-2 flex-grow focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <input type="submit" data-testid="submit" class="bg-black text-white px-4" value="Pesquisar"></input>
             </form>
     </div>
     </div>

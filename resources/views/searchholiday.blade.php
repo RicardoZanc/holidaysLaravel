@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holiday Search</title>
   @vite('resources/css/app.css')
 </head>
 <body>
@@ -17,7 +18,7 @@
     <div id="holidays-container" class="h-full w-full flex flex-col items-center mt-3">
         @if(!empty($holidays))
             @foreach($holidays as $holiday)
-                 <div class="self-center border-2 border-black w-7/12 my-3 p-3 flex justify-between">
+                 <div id="{{ $holiday['date'] }}" class="self-center border-2 border-black w-7/12 my-3 p-3 flex justify-between">
                     <div>
                         <h1 class="text-2xl">{{ $holiday['name'] }}</h2>
                     </div>

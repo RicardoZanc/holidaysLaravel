@@ -19,3 +19,7 @@ yarn-error.log
 /.idea
 /.vscode
 /.zed
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
